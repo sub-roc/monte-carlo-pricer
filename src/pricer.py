@@ -33,7 +33,7 @@ def bs_pricing(Sof0, K, r, sigma, T, option_type='call'):
     else:
         raise ValueError("option_type must be either 'call' or 'put'.")
 
-def mc_pricing(Sof0, K, r, sigma, T, N, M, option_type='call'):
+def mc_pricing(Sof0, K, r, sigma, T, N, M, option_type='call', seed=None):
     """
     price a European option using Monte Carlo simulation.
 
