@@ -4,3 +4,5 @@ scipy
 jupyter
 ipywidgets
 pytest
+yfinance
+pandas
