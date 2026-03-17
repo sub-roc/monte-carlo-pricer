@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360baa7b-01d7-4f5c-ae4d-3b16a8d23bb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/06_market_data.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notebooks/07_greeks.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pricer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pricer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
