@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="360baa7b-01d7-4f5c-ae4d-3b16a8d23bb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01_single_path.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_single_path.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/02_multiple_paths.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/02_multiple_paths.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03_option_pricing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/03_option_pricing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/04_interactive.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/04_interactive.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05_asians_barriers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/05_asians_barriers.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/06_market_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/06_market_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/07_greeks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/07_greeks.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_pricer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pricer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
