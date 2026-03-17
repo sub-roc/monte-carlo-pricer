@@ -3,16 +3,15 @@ sys.path.append('../src')
 
 import numpy as np
 import pytest
-from pricer import bs_pricing, mc_pricing
+from pricer import bs_pricing, mc_pricing, compute_greeks
 
 
-# ── Black-Scholes tests ───────────────────────────────────────────────────────
+# Black-Scholes tests
 
 def test_black_scholes_call_known_value():
     """
     Compare against a known Black-Scholes value.
     S0=100, K=100, r=0.05, sigma=0.20, T=1 → ~$10.45
-    This is a well-known textbook result.
     """
     price = bs_pricing(100, 100, 0.05, 0.20, 1.0, option_type='call')
     assert abs(price - 10.45) < 0.05
@@ -82,7 +81,7 @@ def test_black_scholes_longer_expiry_raises_price():
     assert long > short
 
 
-# ── Monte Carlo tests ─────────────────────────────────────────────────────────
+# Monte Carlo tests
 
 def test_monte_carlo_close_to_bs_pricing():
     """
@@ -125,3 +124,34 @@ def test_monte_carlo_invalid_option_type():
     """Should raise ValueError for an unrecognised option type."""
     with pytest.raises(ValueError):
         mc_pricing(100, 105, 0.05, 0.20, 1.0, N=252, M=1000, option_type='banana')
+
+# Greeks
+
+def test_greeks_delta_call_between_0_and_1():
+    """Call delta must always be between 0 and 1."""
+    g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='call')
+    assert 0 < g['delta'] < 1
+
+
+def test_greeks_delta_put_between_minus1_and_0():
+    """Put delta must always be between -1 and 0."""
+    g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='put')
+    assert -1 < g['delta'] < 0
+
+
+def test_greeks_gamma_positive():
+    """Gamma is always positive for both calls and puts."""
+    g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='call')
+    assert g['gamma'] > 0
+
+
+def test_greeks_vega_positive():
+    """Vega is always positive — higher vol always increases option value."""
+    g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='call')
+    assert g['vega'] > 0
+
+
+def test_greeks_theta_negative():
+    """Theta is always negative — options lose value as time passes."""
+    g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='call')
+    assert g['theta'] < 0
