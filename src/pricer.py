@@ -44,7 +44,7 @@ def mc_pricing(Sof0, K, r, sigma, T, N, M, option_type='call', seed=None):
     """
     from gbm import simulate_paths
 
-    paths = simulate_paths(Sof0, r, sigma, T, N, M)
+    paths = simulate_paths(Sof0, r, sigma, T, N, M, seed=seed)
     final_prices = paths[-1, :]
 
     if option_type == 'call':
