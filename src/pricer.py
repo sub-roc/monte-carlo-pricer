@@ -108,3 +108,43 @@ def compute_greeks(Sof0, K, r, sigma, T, h=0.01, option_type='call'):
         'theta' : round(theta, 4),
         'rho'   : round(rho,   4),
     }
+
+from scipy.optimize import brentq
+
+
+def implied_volatility(market_price, Sof0, K, r, T, option_type='call'):
+    """
+    Compute the implied volatility of a European option.
+
+    Finds the volatility sigma that makes the Black-Scholes price
+    equal to the observed market price, using Brent's root-finding method.
+
+    Parameters
+    ----------
+    market_price : float
+        Observed market price of the option.
+    Sof0 : float
+        Current stock price.
+    K : float
+        Strike price.
+    r : float
+        Risk-free rate.
+    T : float
+        Time to expiry in years.
+    option_type : str
+        'call' or 'put'.
+
+    Returns
+    -------
+    float
+        Implied volatility, or np.nan if no solution found.
+    """
+    # objective: find sigma where BS price - market price = 0
+    def objective(sigma):
+        return bs_pricing(Sof0, K, r, sigma, T, option_type) - market_price
+
+    # check if a solution exists in [0.001, 10.0]
+    try:
+        return brentq(objective, 1e-4, 10.0, xtol=1e-6)
+    except ValueError:
+        return np.nan
