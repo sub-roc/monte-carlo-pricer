@@ -73,7 +73,7 @@ basic probability is given in
 
 Sensitivities of the option price to each input, estimated via central
 finite differences:
-$$\frac{\partial P}{\partial x} \approx \frac{P(x+h) - P(x-h)}{2h}$$$
+$$\frac{\partial P}{\partial x} \approx \frac{P(x+h) - P(x-h)}{2h}$$
 
 | Greek | Symbol | Definition | Intuition |
 |-------|--------|-----------|-----------|
