@@ -9,6 +9,7 @@ A European options pricer built using Monte Carlo simulation
 - Prices Asian and knock-out barrier options using Monte Carlo simulation
 - Pulls market data using `yfinance` to calculate historical volatility, then prices options and compares to market option prices
 - Estimates greeks numerically using finite differences, then compares it to results found using Black-Scholes
+- Estimates implied volatility using Black-Scholes by determining the value of `sigma` needed for the BS model's price to match the real-life option price
 
 ## Background
 
@@ -93,6 +94,7 @@ monte-carlo-pricer/
 │   ├── 05_asians_barriers.ipynb   # Pricing Asian and barrier options using Monte Carlo simulation
 │   ├── 06_market_data.ipynb       # Pulls market history of a stock using yfinance, estimates volatility, prices options, and compares to market
 │   ├── 07_greeks.ipynb            # Estimating greeks numerically, comparing calculations to Monte Carlo results
+│   ├── 08_implied_vol.ipynb       # Determines future volatility by determining value of sigma to produce correct option price
 ├── src/
 │   ├── gbm.py                     # simulate_path, simulate_paths
 │   ├── pricing.py                 # Monte Carlo and Black-Scholes pricing, numerical Greeks pricing
