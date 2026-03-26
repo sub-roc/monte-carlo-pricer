@@ -88,7 +88,8 @@ basic probability is given in
 ### The Greeks
 
 Sensitivities of the option price to each input, estimated via central
-finite differences $\partial P / \partial x \approx (P(x+h) - P(x-h)) / 2h$:
+finite differences:
+$$\frac{\partial P}{\partial x} \approx \frac{P(x+h) - P(x-h)}{2h}$$
 
 | Greek | Symbol | Definition | Intuition |
 |-------|--------|-----------|-----------|
