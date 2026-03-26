@@ -17,7 +17,23 @@ Built before my first year in Mathematical and Physical Sciences at the Universi
 
 ## Math
 
+We begin with the concept of a random walk. It is a discrete random proces,s where every step requires the walker to move either one step up or one step down.
+This random walk can be written as:
+
+$$S_n=S_{n-1}+X_n=\sum^n_{i=1}X_i$$
+
+where $S_n$ is the position after $n$ steps and $X_i$ is the independent step at time $i$. Note that the probability of going up or down is both 50%.
+Keep in mind that $X_n$ is an independent random variable, so it is independent of the historical movement of the random walk. 
+
+When we transition from discrete to continuous, and the number of steps continues to increase, the path smoothens. This is Brownian motion.
+
 ### Geometric Brownian Motion
+
+We use geometric Brownian motion instead of simple Brownian motion for modelling asset prices mainly because of the fact that:
+
+a) Prices can't be negative
+
+b) Returns are multiplicative, e.g. an x% gain followed by an x% drop does not cancel out.
 
 Stock prices are modelled as a continuous-time stochastic process where
 percentage moves (rather than dollar moves) are normally distributed.

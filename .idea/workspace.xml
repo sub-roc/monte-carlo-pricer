@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="360baa7b-01d7-4f5c-ae4d-3b16a8d23bb7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01_single_path.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_single_path.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/02_multiple_paths.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/02_multiple_paths.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/03_option_pricing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/03_option_pricing.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/05_asians_barriers.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/05_asians_barriers.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_pricer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pricer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +37,17 @@
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python tests.Python tests in test_pricer.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/soroushpaidar/PycharmProjects/monte-carlo-pricer/notebooks&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">

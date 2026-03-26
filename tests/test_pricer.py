@@ -3,7 +3,8 @@ sys.path.append('../src')
 
 import numpy as np
 import pytest
-from pricer import bs_pricing, mc_pricing, compute_greeks
+import yfinance as yf
+from pricer import bs_pricing, mc_pricing, compute_greeks, implied_volatility
 
 
 # Black-Scholes tests
@@ -155,3 +156,8 @@ def test_greeks_theta_negative():
     """Theta is always negative — options lose value as time passes."""
     g = compute_greeks(100, 105, 0.05, 0.20, 1.0, option_type='call')
     assert g['theta'] < 0
+
+# Implied volatility
+
+def test_vol_sign_positive():
+    """Vol is always positive for both calls and puts."""
